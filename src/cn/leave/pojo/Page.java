@@ -1,6 +1,7 @@
 package cn.leave.pojo;
 
 public class Page {
+	private int zs;//张三
     private int lmj;//帧数
 	private int currPageNo; // 褰撳墠椤电爜
 	private int pageSize; // 姣忛〉鏄剧ず鐨勬暟鎹鏁�
