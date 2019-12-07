@@ -2,6 +2,10 @@ package cn.leave.pojo;
 
 public class Page {
 	private int zzzz;
+<<<<<<< HEAD
+=======
+	private int xxxxxxxxx;
+>>>>>>> branch 'master' of https://github.com/limingjie520/SSM.git
 	private int ttttttttttttttttt;
 	private int wwww;
 	private String nnn;//啊
