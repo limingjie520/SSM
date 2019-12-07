@@ -2,7 +2,7 @@ package cn.leave.pojo;
 
 public class Page {
 private int zzz1;
-	private int xxxxxxxx88;
+	private int xxxxxxxx666;
 	private int ttttttttttttttttt;
 	private int wwww;
 	private String nnn;//啊
