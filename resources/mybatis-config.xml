@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+  <!-- 引入之前创建好的database.properties配置文件 -->
+  <configuration>
+  
+  
+  
+  <properties resource="database.properties">
+  </properties>
+
+  
+   <!--指定当前MyBatus的LOG实现为LOG4J-->
+   <settings>
+   <setting name="logImpl" value="LOG4J"/>
+   
+   
+   <!-- 设置resultMap的自动映射级别为NONE（禁止自动匹配） FULL（自动匹配所有） -->
+   
+   <setting name="autoMappingBehavior" value="FULL"/> 
+   </settings>
+   
+   
+   <typeAliases>
+   <package name="cn.leave.pojo"/>
+   </typeAliases>
+   
+ 
+ 
+<!--  3配置mybatis多套运行环境 -->
+   <environments default="development">
+   
+   <environment id="development">
+     <!--  配置事务管理，采用JDBC的事务管理 -->
+     <transactionManager type="JDBC"></transactionManager>
+     <!--   配置mybatis的数据源 -->
+     <dataSource type="POOLED">
+      <property name="driver" value="${driver}"/>
+      <property name="url" value="${url}"/>
+      <property name="username" value="${username}"/>
+      <property name="password" value="${password}"/>
+     </dataSource>
+   </environment>
+   </environments>
+ 
+    <!-- 将mapper文件加入到配置文件中 -->
+    <mappers>
+    
+   <mapper resource="cn/leave/dao/LeaveMapper.xml"/>
+
+
+    </mappers>
+    
+    
+   
+   </configuration>
+   
+   
+   
