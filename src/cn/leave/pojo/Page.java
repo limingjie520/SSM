@@ -1,11 +1,11 @@
 package cn.leave.pojo;
 
 public class Page {
-
-	private int currPageNo; // 当前页码
-	private int pageSize; // 每页显示的数据行数
-	private int totalCount; // 总记录数
-	private int totalPageCount; // 总页数
+    private int lmj;//帧数
+	private int currPageNo; // 褰撳墠椤电爜
+	private int pageSize; // 姣忛〉鏄剧ず鐨勬暟鎹鏁�
+	private int totalCount; // 鎬昏褰曟暟
+	private int totalPageCount; // 鎬婚〉鏁�
 	
 	public int getCurrPageNo() {
 		return currPageNo;
@@ -26,7 +26,7 @@ public class Page {
 		if(totalCount>0) {
 			this.totalCount = totalCount;
 			
-			/* 总记录数 /每页显示的数据行数*/
+			/* 鎬昏褰曟暟 /姣忛〉鏄剧ず鐨勬暟鎹鏁�*/
 			this.totalPageCount=this.totalCount%this.pageSize==0?
 					this.totalCount/this.pageSize:this.totalCount/this.pageSize+1;
 			
